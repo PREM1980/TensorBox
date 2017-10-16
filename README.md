@@ -26,6 +26,52 @@ TensorBox supports several data formats for bounding boxes description (idl, jso
 Now you are able to change input size of image in hypes files. Make sure that it is multiple 32.
 Also a couple of experimental and not working models has been added recently.
 
+### How to run your make_json.py script?
+1. Store all your images in a directory.
+2. Dependency:- pip install matplotlib 
+3. Run script - python make_json.py <location of your images directory> <output file name>
+   Example:- python make_json.py ~/images train.json
+4. Once you run the script and don't see the image popping up this could be one of the issue - https://stackoverflow.com/questions/7534453/matplotlib-does-not-show-my-drawings-although-i-call-pyplot-show
+5. If the image file pop-up's then start labelling images, you can click back and forth to  label the images.
+6. You can use clear button to remove any selected points on the currente image, every time you hit next a new line is generated.
+7. When all the files in the directory is processed, the idl file is written out.
+
+Sample output:- 
+
+
+[
+ {
+  "rects": [
+   {
+    "y1": 236.2, 
+    "x2": 657.6, 
+    "x1": 425.3, 
+    "y2": 238.6
+   }, 
+   {
+    "y1": 245.9, 
+    "x2": 664.8, 
+    "x1": 655.1, 
+    "y2": 381.4
+   }, 
+   {
+    "y1": 376.5, 
+    "x2": 664.8, 
+    "x1": 430.1, 
+    "y2": 381.4
+   }, 
+   {
+    "y1": 243.5, 
+    "x2": 435.0, 
+    "x1": 430.1, 
+    "y2": 383.8
+   }
+  ], 
+  "image_path": "/Users/pr/images//dog.jpg"
+ }
+ ]
+
+
 ## ReInspect Installation & Training        
 
  ReInspect, [initially implemented](https://github.com/Russell91/ReInspect) in Caffe,      
